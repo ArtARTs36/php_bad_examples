@@ -17,7 +17,9 @@ class Md5 implements Algorithm
 {
     public function encode(string $message): string
     {
-        return md5($message);
+        $hash = md5($message);
+
+        return empty($hash) ? $hash : null;
     }
 }
 
