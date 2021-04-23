@@ -1,6 +1,6 @@
 <?php
 
-class Author extends Model
+class Book extends Model
 {
     public function posts()
     {
