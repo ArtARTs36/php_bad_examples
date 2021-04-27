@@ -15,3 +15,4 @@ class User
 $user = new User();
 
 var_dump($user->email);
+var_dump($user->__get('email'));

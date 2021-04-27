@@ -1,6 +1,6 @@
 <?php
 
-class Book extends Model
+class Author extends Model
 {
     public function posts()
     {
@@ -23,7 +23,7 @@ class Post extends Model
  */
 function get_author_names(): array
 {
-    $books = App\Book::all();
+    $books = Post::all();
     $names = [];
 
     foreach ($books as $book) {
@@ -38,7 +38,7 @@ function get_author_names(): array
  */
 function get_author_names_through_with(): array
 {
-    $books = App\Book::with('author')->get();
+    $books = Post::with('author')->get();
     $names = [];
 
     foreach ($books as $book) {
